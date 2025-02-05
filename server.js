@@ -111,6 +111,11 @@ app.post("/verify-otp", (req, res) => {
   res.status(400).json({ error: "Invalid or expired OTP" });
 });
 
+// Endpoint to check if server is running
+app.get("/", (req, res) => {
+  res.send("Server is running!");
+});
+
 const PORT = process.env.PORT ? Number(process.env.PORT) : 3069;
 app.listen(PORT, "0.0.0.0", () => {
   console.log(`Server running on ${PORT}`);
