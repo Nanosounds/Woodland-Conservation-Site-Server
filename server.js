@@ -27,8 +27,8 @@ let otpStore = {};
 const transporter = nodemailer.createTransport({
   service: "Gmail",
   auth: {
-    user: "saintmargaretsbayarea@gmail.com",
-    pass: "mjxqziowlnnywqwb",
+    user: "smbwoodlandconservation@gmail.com",
+    pass: "Starwarsrox1!",
   },
 });
 
@@ -46,7 +46,7 @@ app.post("/send-otp", (req, res) => {
   otpStore[email] = otp;
 
   const mailOptions = {
-    from: "saintmargaretsbayarea@gmail.com",
+    from: "smbwoodlandconservation@gmail.com",
     to: email,
     subject: "Your OTP for Verification",
     text: `Your OTP is ${otp}. It will expire in 10 minutes.`,
@@ -75,7 +75,7 @@ app.post("/send-confirmation", (req, res) => {
   }
 
   const mailOptions = {
-    from: "saintmargaretsbayarea@gmail.com",
+    from: "smbwoodlandconservation@gmail.com",
     to: email,
     subject: "Confirmation of Your Inquiry",
     text:
