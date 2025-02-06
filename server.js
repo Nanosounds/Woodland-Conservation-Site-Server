@@ -116,7 +116,7 @@ app.get("/", (req, res) => {
   res.send("Server is running!");
 });
 
-const PORT = process.env.PORT ? Number(process.env.PORT) : 3069;
+const PORT = process.env.PORT || 3069;
 app.listen(PORT, () => {
   console.log(`Server running on ${PORT}`);
 });
