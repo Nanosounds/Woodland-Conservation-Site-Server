@@ -117,6 +117,6 @@ app.get("/", (req, res) => {
 });
 
 const PORT = process.env.PORT ? Number(process.env.PORT) : 3069;
-app.listen(PORT, "0.0.0.0", () => {
+app.listen(PORT, () => {
   console.log(`Server running on ${PORT}`);
 });
